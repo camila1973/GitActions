@@ -1,7 +1,7 @@
 name: Pruebas unitarias
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   job1:
     name: Pruebas
@@ -12,7 +12,7 @@ jobs:
     - name: Configuración de entorno de python
       uses: actions/setup-python@v2
       with:
-          python-version: '3.7'
+          python-version: '3.12'
     - name: Correr pruebas
       id: correr-pruebas
       run: python -m unittest -v tests/test_semana6_a.py
