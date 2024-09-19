@@ -12,7 +12,11 @@ jobs:
     - name: Configuración de entorno de python
       uses: actions/setup-python@v2
       with:
-          python-version: '3.12'
+        python-version: '3.12'
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install Faker
     - name: Correr pruebas
       id: correr-pruebas
       run: python -m unittest -v tests/test_semana6_a.py
